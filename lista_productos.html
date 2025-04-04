@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>App Facturacion</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">FACT-3000</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Productos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="lista_productos.html">Listar Productos</a>
+                        <a class="dropdown-item" href="formulario_producto.html">Crear Producto</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <h2>Listado de Productos</h2>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Cantidad Inventario</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Unidad de Medida</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Bananos</td>
+                <td>100</td>
+                <td>2500</td>
+                <td>Unidad</td>
+                <td>Alimentos frescos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Aguacates</td>
+                <td>50</td>
+                <td>3000</td>
+                <td>Unidad</td>
+                <td>Alimentos frescos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Mangos</td>
+                <td>75</td>
+                <td>4000</td>
+                <td>Unidad</td>
+                <td>Alimentos frescos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Piñas</td>
+                <td>30</td>
+                <td>6000</td>
+                <td>Unidad</td>
+                <td>Alimentos frescos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Limones</td>
+                <td>200</td>
+                <td>1000</td>
+                <td>Unidad</td>
+                <td>Alimentos frescos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>Papayas</td>
+                <td>40</td>
+                <td>5000</td>
+                <td>Unidad</td>
+                <td>Alimentos frescos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td>Naranjas</td>
+                <td>150</td>
+                <td>2000</td>
+                <td>Unidad</td>
+                <td>Alimentos frescos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <td>Uvas</td>
+                <td>60</td>
+                <td>7000</td>
+                <td>Unidad</td>
+                <td>Alimentos frescos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">9</th>
+                <td>Papas criollas</td>
+                <td>80</td>
+                <td>3500</td>
+                <td>Libra</td>
+                <td>Alimentos frescos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td>Tomates</td>
+                <td>120</td>
+                <td>2800</td>
+                <td>Libra</td>
+                <td>Alimentos frescos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">11</th>
+                <td>Cebollas largas</td>
+                <td>90</td>
+                <td>2200</td>
+                <td>Libra</td>
+                <td>Alimentos frescos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">12</th>
+                <td>Zanahorias</td>
+                <td>110</td>
+                <td>2600</td>
+                <td>Libra</td>
+                <td>Alimentos frescos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">13</th>
+                <td>Pimientos</td>
+                <td>70</td>
+                <td>4500</td>
+                <td>Libra</td>
+                <td>Alimentos frescos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">14</th>
+                <td>Espinacas</td>
+                <td>55</td>
+                <td>3200</td>
+                <td>Libra</td>
+                <td>Alimentos frescos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">15</th>
+                <td>Brócoli</td>
+                <td>65</td>
+                <td>3800</td>
+                <td>Libra</td>
+                <td>Alimentos frescos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">16</th>
+                <td>Yuca</td>
+                <td>100</td>
+                <td>2000</td>
+                <td>Libra</td>
+                <td>Alimentos frescos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">17</th>
+                <td>Filetes de pollo</td>
+                <td>80</td>
+                <td>12000</td>
+                <td>Libra</td>
+                <td>Carnes y pescados</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">18</th>
+                <td>Carne de res</td>
+                <td>60</td>
+                <td>15000</td>
+                <td>Libra</td>
+                <td>Carnes y pescados</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">19</th>
+                <td>Chuleta de cerdo</td>
+                <td>70</td>
+                <td>10000</td>
+                <td>Libra</td>
+                <td>Carnes y pescados</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">20</th>
+                <td>Chorizos</td>
+                <td>90</td>
+                <td>8000</td>
+                <td>Libra</td>
+                <td>Carnes y pescados</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">21</th>
+                <td>Pescado basa</td>
+                <td>50</td>
+                <td>11000</td>
+                <td>Libra</td>
+                <td>Carnes y pescados</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">22</th>
+                <td>Mojarra fresca</td>
+                <td>40</td>
+                <td>13000</td>
+                <td>Libra</td>
+                <td>Carnes y pescados</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">23</th>
+                <td>Camarones</td>
+                <td>30</td>
+                <td>18000</td>
+                <td>Libra</td>
+                <td>Carnes y pescados</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">24</th>
+                <td>Carne molida</td>
+                <td>100</td>
+                <td>9000</td>
+                <td>Libra</td>
+                <td>Carnes y pescados</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">25</th>
+                <td>Pan de bono</td>
+                <td>120</td>
+                <td>2500</td>
+                <td>Unidad</td>
+                <td>Panadería</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">26</th>
+                <td>Almojábanas</td>
+                <td>100</td>
+                <td>2200</td>
+                <td>Unidad</td>
+                <td>Panadería</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">27</th>
+                <td>Croissants</td>
+                <td>80</td>
+                <td>3000</td>
+                <td>Unidad</td>
+                <td>Panadería</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">28</th>
+                <td>Pan aliñado</td>
+                <td>90</td>
+                <td>2800</td>
+                <td>Unidad</td>
+                <td>Panadería</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">29</th>
+                <td>Pandebonos</td>
+                <td>110</td>
+                <td>2300</td>
+                <td>Unidad</td>
+                <td>Panadería</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">30</th>
+                <td>Bizcochos</td>
+                <td>70</td>
+                <td>2600</td>
+                <td>Unidad</td>
+                <td>Panadería</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">31</th>
+                <td>Arepas de maíz</td>
+                <td>130</td>
+                <td>1800</td>
+                <td>Unidad</td>
+                <td>Panadería</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">32</th>
+                <td>Galletas caseras</td>
+                <td>60</td>
+                <td>3500</td>
+                <td>Unidad</td>
+                <td>Panadería</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">33</th>
+                <td>Leche deslactosada</td>
+                <td>50</td>
+                <td>4000</td>
+                <td>Litro</td>
+                <td>Productos refrigerados y congelados</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">34</th>
+                <td>Yogures con frutas</td>
+                <td>80</td>
+                <td>2800</td>
+                <td>Unidad</td>
+                <td>Productos refrigerados y congelados</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">35</th>
+                <td>Queso campesino</td>
+                <td>60</td>
+                <td>8000</td>
+                <td>Libra</td>
+                <td>Productos refrigerados y congelados</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">36</th>
+                <td>Mantequilla con sal</td>
+                <td>70</td>
+                <td>6000</td>
+                <td>Unidad</td>
+                <td>Productos refrigerados y congelados</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">37</th>
+                <td>Kumis</td>
+                <td>90</td>
+                <td>3500</td>
+                <td>Unidad</td>
+                <td>Productos refrigerados y congelados</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">38</th>
+                <td>Crema de leche</td>
+                <td>55</td>
+                <td>5000</td>
+                <td>Unidad</td>
+                <td>Productos refrigerados y congelados</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">39</th>
+                <td>Postres refrigerados</td>
+                <td>45</td>
+                <td>4500</td>
+                <td>Unidad</td>
+                <td>Productos refrigerados y congelados</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">40</th>
+                <td>Batidos saborizados</td>
+                <td>65</td>
+                <td>3800</td>
+                <td>Unidad</td>
+                <td>Productos refrigerados y congelados</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">41</th>
+                <td>Pizzas congeladas</td>
+                <td>70</td>
+                <td>12000</td>
+                <td>Unidad</td>
+                <td>Comida congelada</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">42</th>
+                <td>Patacones congelados</td>
+                <td>80</td>
+                <td>6000</td>
+                <td>Paquete</td>
+                <td>Comida congelada</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">43</th>
+                <td>Helados</td>
+                <td>90</td>
+                <td>4500</td>
+                <td>Unidad</td>
+                <td>Comida congelada</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">44</th>
+                <td>Empanadas congeladas</td>
+                <td>100</td>
+                <td>3000</td>
+                <td>Unidad</td>
+                <td>Comida congelada</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">45</th>
+                <td>Nuggets de pollo</td>
+                <td>60</td>
+                <td>10000</td>
+                <td>Paquete</td>
+                <td>Comida congelada</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">46</th>
+                <td>Pescado apanado</td>
+                <td>50</td>
+                <td>15000</td>
+                <td>Paquete</td>
+                <td>Comida congelada</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">47</th>
+                <td>Croquetas de papa</td>
+                <td>70</td>
+                <td>8000</td>
+                <td>Paquete</td>
+                <td>Comida congelada</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">48</th>
+                <td>Pulpa de fruta congelada</td>
+                <td>80</td>
+                <td>7000</td>
+                <td>Paquete</td>
+                <td>Comida congelada</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">49</th>
+                <td>Arroz blanco</td>
+                <td>150</td>
+                <td>4000</td>
+                <td>Libra</td>
+                <td>Arroces, pastas y legumbres</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">50</th>
+                <td>Macarrones</td>
+                <td>120</td>
+                <td>3500</td>
+                <td>Paquete</td>
+                <td>Arroces, pastas y legumbres</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">51</th>
+                <td>Lentejas</td>
+                <td>100</td>
+                <td>5000</td>
+                <td>Libra</td>
+                <td>Arroces, pastas y legumbres</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">52</th>
+                <td>Garbanzos</td>
+                <td>90</td>
+                <td>5500</td>
+                <td>Libra</td>
+                <td>Arroces, pastas y legumbres</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">53</th>
+                <td>Fríjoles</td>
+                <td>110</td>
+                <td>4800</td>
+                <td>Libra</td>
+                <td>Arroces, pastas y legumbres</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">54</th>
+                <td>Pasta para lasaña</td>
+                <td>80</td>
+                <td>6000</td>
+                <td>Paquete</td>
+                <td>Arroces, pastas y legumbres</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">55</th>
+                <td>Arroz integral</td>
+                <td>70</td>
+                <td>4500</td>
+                <td>Libra</td>
+                <td>Arroces, pastas y legumbres</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">56</th>
+                <td>Fideos</td>
+                <td>60</td>
+                <td>3800</td>
+                <td>Paquete</td>
+                <td>Arroces, pastas y legumbres</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">57</th>
+                <td>Atún en aceite</td>
+                <td>100</td>
+                <td>5500</td>
+                <td>Lata</td>
+                <td>Conservas</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">58</th>
+                <td>Sardinas en tomate</td>
+                <td>90</td>
+                <td>4800</td>
+                <td>Lata</td>
+                <td>Conservas</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">59</th>
+                <td>Maíz dulce</td>
+                <td>80</td>
+                <td>4200</td>
+                <td>Lata</td>
+                <td>Conservas</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">60</th>
+                <td>Tomate triturado</td>
+                <td>110</td>
+                <td>3800</td>
+                <td>Lata</td>
+                <td>Conservas</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">61</th>
+                <td>Mermeladas</td>
+                <td>70</td>
+                <td>6000</td>
+                <td>Frasco</td>
+                <td>Conservas</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">62</th>
+                <td>Salsas tamarindo</td>
+                <td>60</td>
+                <td>5000</td>
+                <td>Frasco</td>
+                <td>Conservas</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">63</th>
+                <td>Espárragos</td>
+                <td>50</td>
+                <td>7000</td>
+                <td>Lata</td>
+                <td>Conservas</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">64</th>
+                <td>Paté</td>
+                <td>40</td>
+                <td>8000</td>
+                <td>Lata</td>
+                <td>Conservas</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">65</th>
+                <td>Salsa de tomate</td>
+                <td>120</td>
+                <td>3000</td>
+                <td>Frasco</td>
+                <td>Salsas y condimentos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">66</th>
+                <td>Mayonesa</td>
+                <td>100</td>
+                <td>4000</td>
+                <td>Frasco</td>
+                <td>Salsas y condimentos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">67</th>
+                <td>Aceite vegetal</td>
+                <td>90</td>
+                <td>6000</td>
+                <td>Litro</td>
+                <td>Salsas y condimentos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">68</th>
+                <td>Vinagre blanco</td>
+                <td>80</td>
+                <td>3500</td>
+                <td>Litro</td>
+                <td>Salsas y condimentos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">69</th>
+                <td>Sal</td>
+                <td>150</td>
+                <td>2000</td>
+                <td>Paquete</td>
+                <td>Salsas y condimentos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">70</th>
+                <td>Pimienta</td>
+                <td>110</td>
+                <td>2500</td>
+                <td>Paquete</td>
+                <td>Salsas y condimentos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">71</th>
+                <td>Ajo en polvo</td>
+                <td>100</td>
+                <td>3000</td>
+                <td>Frasco</td>
+                <td>Salsas y condimentos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">72</th>
+                <td>Caldos en cubos</td>
+                <td>90</td>
+                <td>4000</td>
+                <td>Paquete</td>
+                <td>Salsas y condimentos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">73</th>
+                <td>Gaseosas varios sabores</td>
+                <td>120</td>
+                <td>2500</td>
+                <td>Unidad</td>
+                <td>Refrescos</td>
+                <td>
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">74</th>
+                <td>Jugos en caja</td>
+                <td>100</td>
+                <td>3000</td>
+                <td>Unidad</td>
+                <td>Refrescos</td>
+                <td>
+                    <button
+                    <th scope="row">75</th>
+                    <td>Agua con y sin gas</td>
+                    <td>150</td>
+                    <td>2000</td>
+                    <td>Unidad</td>
+                    <td>Refrescos</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">76</th>
+                    <td>Bebidas energéticas</td>
+                    <td>80</td>
+                    <td>3500</td>
+                    <td>Unidad</td>
+                    <td>Refrescos</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">77</th>
+                    <td>Té helado</td>
+                    <td>90</td>
+                    <td>3200</td>
+                    <td>Unidad</td>
+                    <td>Refrescos</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">78</th>
+                    <td>Limonadas</td>
+                    <td>110</td>
+                    <td>2800</td>
+                    <td>Unidad</td>
+                    <td>Refrescos</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">79</th>
+                    <td>Bebidas saborizadas</td>
+                    <td>70</td>
+                    <td>2600</td>
+                    <td>Unidad</td>
+                    <td>Refrescos</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">80</th>
+                    <td>Malta</td>
+                    <td>60</td>
+                    <td>3800</td>
+                    <td>Unidad</td>
+                    <td>Refrescos</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">81</th>
+                    <td>Jugos de frutas tropicales</td>
+                    <td>50</td>
+                    <td>4000</td>
+                    <td>Unidad</td>
+                    <td>Zumos y aguas</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">82</th>
+                    <td>Smoothies</td>
+                    <td>40</td>
+                    <td>4500</td>
+                    <td>Unidad</td>
+                    <td>Zumos y aguas</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">83</th>
+                    <td>Agua saborizada</td>
+                    <td>130</td>
+                    <td>2200</td>
+                    <td>Unidad</td>
+                    <td>Zumos y aguas</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">84</th>
+                    <td>Batidos naturales</td>
+                    <td>100</td>
+                    <td>3500</td>
+                    <td>Unidad</td>
+                    <td>Zumos y aguas</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">85</th>
+                    <td>Jugos detox</td>
+                    <td>90</td>
+                    <td>5000</td>
+                    <td>Unidad</td>
+                    <td>Zumos y aguas</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">86</th>
+                    <td>Pulpa de frutas</td>
+                    <td>80</td>
+                    <td>6000</td>
+                    <td>Paquete</td>
+                    <td>Zumos y aguas</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">87</th>
+                    <td>Infusiones frías</td>
+                    <td>70</td>
+                    <td>4800</td>
+                    <td>Unidad</td>
+                    <td>Zumos y aguas</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">88</th>
+                    <td>Agua mineral</td>
+                    <td>110</td>
+                    <td>2800</td>
+                    <td>Unidad</td>
+                    <td>Zumos y aguas</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">89</th>
+                    <td>Champús</td>
+                    <td>100</td>
+                    <td>8000</td>
+                    <td>Unidad</td>
+                    <td>Higiene personal</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">90</th>
+                    <td>Pasta dental</td>
+                    <td>120</td>
+                    <td>5000</td>
+                    <td>Unidad</td>
+                    <td>Higiene personal</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">91</th>
+                    <td>Jabón de baño</td>
+                    <td>150</td>
+                    <td>3000</td>
+                    <td>Unidad</td>
+                    <td>Higiene personal</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">92</th>
+                    <td>Desodorantes</td>
+                    <td>90</td>
+                    <td>6000</td>
+                    <td>Unidad</td>
+                    <td>Higiene personal</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">93</th>
+                    <td>Cremas hidratantes</td>
+                    <td>80</td>
+                    <td>10000</td>
+                    <td>Unidad</td>
+                    <td>Higiene personal</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">94</th>
+                    <td>Papel higiénico</td>
+                    <td>110</td>
+                    <td>4000</td>
+                    <td>Paquete</td>
+                    <td>Higiene personal</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button> 
+                      </td>
+                    </tr>          
+        </tbody>
+      </table>
+</body>
+</html>

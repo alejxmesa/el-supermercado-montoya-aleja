@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de Usuarios y Clientes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center">Datos de Usuarios y Clientes</h2>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo Electrónico</th>
+                    <th>Localidad</th>
+                    <th>Dirección</th>
+                    <th>Tipo de Identificación</th>
+                    <th>Número de Identificación</th>
+                    <th>Teléfono</th>
+                    <th>Fecha de Nacimiento</th>
+                </tr>
+            </thead>
+            <tbody id="dataTableBody">
+                </tbody>
+        </table>
+
+        <h3>Agregar Nuevo Usuario o Cliente</h3>
+        <form id="dataForm">
+            <div class="form-group">
+                <label for="nombresApellidos">Nombres y Apellidos:</label>
+                <input type="text" class="form-control" id="nombresApellidos" required>
+            </div>
+            <div class="form-group">
+                <label for="correoElectronico">Correo Electrónico:</label>
+                <input type="email" class="form-control" id="correoElectronico" required>
+            </div>
+            <div class="form-group">
+                <label for="localidad">Localidad:</label>
+                <input type="text" class="form-control" id="localidad" required>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" class="form-control" id="direccion" required>
+            </div>
+            <div class="form-group">
+                <label for="tipoIdentificacion">Tipo de Identificación:</label>
+                <select class="form-control" id="tipoIdentificacion" required>
+                    <option value="" disabled selected>Selecciona</option>
+                    <option value="Cédula de Ciudadanía">Cédula de Ciudadanía</option>
+                    <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
+                    <option value="Cédula de Extranjería">Cédula de Extranjería</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="numeroIdentificacion">Número de Identificación:</label>
+                <input type="text" class="form-control" id="numeroIdentificacion" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" class="form-control" id="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" class="form-control" id="fechaNacimiento" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="addData()">Agregar</button>
+        </form>
+    </div>
+
+    <script>
+        let dataArray = []; // Array para almacenar los datos
+
+        function addData() {
+            const nombresApellidosInput = document.getElementById("nombresApellidos");
+            const correoElectronicoInput = document.getElementById("correoElectronico");
+            const localidadInput = document.getElementById("localidad");
+            const direccionInput = document.getElementById("direccion");
+            const tipoIdentificacionSelect = document.getElementById("tipoIdentificacion");
+            const numeroIdentificacionInput = document.getElementById("numeroIdentificacion");
+            const telefonoInput = document.getElementById("telefono");
+            const fechaNacimientoInput = document.getElementById("fechaNacimiento");
+            const tableBody = document.getElementById("dataTableBody");
+
+            const nombresApellidos = nombresApellidosInput.value;
+            const correoElectronico = correoElectronicoInput.value;
+            const localidad = localidadInput.value;
+            const direccion = direccionInput.value;
+            const tipoIdentificacion = tipoIdentificacionSelect.value;
+            const numeroIdentificacion = numeroIdentificacionInput.value;
+            const telefono = telefonoInput.value;
+            const fechaNacimiento = fechaNacimientoInput.value;
+
+            if (nombresApellidos && correoElectronico) {
+                dataArray.push({
+                    nombresApellidos: nombresApellidos,
+                    correoElectronico: correoElectronico,
+                    localidad: localidad,
+                    direccion: direccion,
+                    tipoIdentificacion: tipoIdentificacion,
+                    numeroIdentificacion: numeroIdentificacion,
+                    telefono: telefono,
+                    fechaNacimiento: fechaNacimiento
+                });
+                updateTable();
+                clearForm();
+            } else {
+                alert("Por favor, ingresa al menos el nombre y el correo electrónico.");
+            }
+        }
+
+        function updateTable() {
+            const tableBody = document.getElementById("dataTableBody");
+            tableBody.innerHTML = ""; // Limpiar la tabla
+
+            dataArray.forEach(item => {
+                const row = tableBody.insertRow();
+                const nombresApellidosCell = row.insertCell();
+                const correoElectronicoCell = row.insertCell();
+                const localidadCell = row.insertCell();
+                const direccionCell = row.insertCell();
+                const tipoIdentificacionCell = row.insertCell();
+                const numeroIdentificacionCell = row.insertCell();
+                const telefonoCell = row.insertCell();
+                const fechaNacimientoCell = row.insertCell();
+
+                nombresApellidosCell.textContent = item.nombresApellidos;
+                correoElectronicoCell.textContent = item.correoElectronico;
+                localidadCell.textContent = item.localidad;
+                direccionCell.textContent = item.direccion;
+                tipoIdentificacionCell.textContent = item.tipoIdentificacion;
+                numeroIdentificacionCell.textContent = item.numeroIdentificacion;
+                telefonoCell.textContent = item.telefono;
+                fechaNacimientoCell.textContent = item.fechaNacimiento;
+            });
+        }
+
+        function clearForm() {
+            document.getElementById("nombresApellidos").value = "";
+            document.getElementById("correoElectronico").value = "";
+            document.getElementById("localidad").value = "";
+            document.getElementById("direccion").value = "";
+            document.getElementById("tipoIdentificacion").selectedIndex = 0;
+            document.getElementById("numeroIdentificacion").value = "";
+            document.getElementById("telefono").value = "";
+            document.getElementById("fechaNacimiento").value = "";
+        }
+
+        // Mostrar los datos iniciales si los hay
+        updateTable();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registros Usuarios Supermercados Montoya</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center">Formulario de Registros Usuarios Supermercados Montoya</h2>
+        <form>
+            <!-- Nombres y Apellidos -->
+            <div class="form-group">
+                <label for="nombresApellidos">Nombres y Apellidos</label>
+                <input type="text" class="form-control" id="nombresApellidos" placeholder="Ingresa tus nombres y apellidos" required>
+            </div>
+            <!-- Correo Electrónico -->
+            <div class="form-group">
+                <label for="correoElectronico">Correo Electrónico</label>
+                <input type="email" class="form-control" id="correoElectronico" placeholder="ejemplo@correo.com" required>
+            </div>
+            <!-- Localidad -->
+            <div class="form-group">
+                <label for="localidad">Localidad</label>
+                <input type="text" class="form-control" id="localidad" placeholder="Ingresa tu localidad" required>
+            </div>
+            <!-- Dirección -->
+            <div class="form-group">
+                <label for="direccion">Dirección</label>
+                <input type="text" class="form-control" id="direccion" placeholder="Ingresa tu dirección" required>
+            </div>
+            <!-- Tipo de Identificación -->
+            <div class="form-group">
+                <label for="tipoIdentificacion">Tipo de Identificación</label>
+                <select class="form-control" id="tipoIdentificacion" required>
+                    <option value="" disabled selected>Selecciona el tipo de identificación</option>
+                    <option value="Cédula de Ciudadanía">Cédula de Ciudadanía</option>
+                    <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
+                    <option value="Cédula de Extranjería">Cédula de Extranjería</option>
+                </select>
+            </div>
+            <!-- Número de Identificación -->
+            <div class="form-group">
+                <label for="numeroIdentificacion">Número de Identificación</label>
+                <input type="text" class="form-control" id="numeroIdentificacion" placeholder="Ingresa tu número de identificación" required>
+            </div>
+            <!-- Teléfono -->
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu número de teléfono" required>
+            </div>
+            <!-- Fecha de Nacimiento -->
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="fechaNacimiento" required>
+            </div>
+            <!-- Botón de Envío -->
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
+</body>
+</html>

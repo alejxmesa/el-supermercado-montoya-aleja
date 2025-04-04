@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro de Usuarios y/o Vendedores - Supermercados Montoya</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center">Formulario de Registro para Usuarios o Vendedores</h2>
+        <form>
+            <div class="form-group">
+                <label for="tipoRegistro">¿Eres un usuario (cliente) o un vendedor?</label>
+                <select class="form-control" id="tipoRegistro" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="usuario">Usuario (Cliente)</option>
+                    <option value="vendedor">Vendedor</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nombresApellidos">Nombres y Apellidos</label>
+                <input type="text" class="form-control" id="nombresApellidos" placeholder="Ingresa tus nombres y apellidos" required>
+            </div>
+
+            <div class="form-group">
+                <label for="correoElectronico">Correo Electrónico</label>
+                <input type="email" class="form-control" id="correoElectronico" placeholder="ejemplo@correo.com" required>
+            </div>
+
+            <div id="camposUsuario">
+                <div class="form-group">
+                    <label for="localidad">Localidad</label>
+                    <input type="text" class="form-control" id="localidad" placeholder="Ingresa tu localidad">
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" class="form-control" id="direccion" placeholder="Ingresa tu dirección">
+                </div>
+            </div>
+
+            <div id="camposVendedor" style="display: none;">
+                <div class="form-group">
+                    <label for="codigoVendedor">Código de Vendedor</label>
+                    <input type="text" class="form-control" id="codigoVendedor" placeholder="Ingresa tu código de vendedor">
+                </div>
+                <div class="form-group">
+                    <label for="departamento">Departamento</label>
+                    <input type="text" class="form-control" id="departamento" placeholder="Ingresa tu departamento">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="tipoIdentificacion">Tipo de Identificación</label>
+                <select class="form-control" id="tipoIdentificacion" required>
+                    <option value="" disabled selected>Selecciona el tipo de identificación</option>
+                    <option value="Cédula de Ciudadanía">Cédula de Ciudadanía</option>
+                    <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
+                    <option value="Cédula de Extranjería">Cédula de Extranjería</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="numeroIdentificacion">Número de Identificación</label>
+                <input type="text" class="form-control" id="numeroIdentificacion" placeholder="Ingresa tu número de identificación" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu número de teléfono" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="fechaNacimiento" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
+
+    <script>
+        const tipoRegistroSelect = document.getElementById('tipoRegistro');
+        const camposUsuarioDiv = document.getElementById('camposUsuario');
+        const camposVendedorDiv = document.getElementById('camposVendedor');
+
+        tipoRegistroSelect.addEventListener('change', function() {
+            if (this.value === 'usuario') {
+                camposUsuarioDiv.style.display = 'block';
+                camposVendedorDiv.style.display = 'none';
+            } else if (this.value === 'vendedor') {
+                camposUsuarioDiv.style.display = 'none';
+                camposVendedorDiv.style.display = 'block';
+            } else {
+                camposUsuarioDiv.style.display = 'none';
+                camposVendedorDiv.style.display = 'none';
+            }
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
